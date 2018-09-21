@@ -1,15 +1,14 @@
 const path = require('path');
 
 module.exports = {
-  entry: './App/src/index.js',
+  entry: './app/src/index.js',
   mode: 'development',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'app/dist'),
   },
   devServer: {
-    contentBase: './App/dist',
-    open: 'chrome',
+    contentBase: './app/dist/',
   },
   module: {
     rules: [

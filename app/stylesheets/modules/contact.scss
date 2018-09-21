@@ -1,0 +1,17 @@
+@import "./variables";
+
+#contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10vh;
+  #contact-icons-container {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    img {
+      width: 75px;
+      height: 75px;
+    }
+  }
+}
