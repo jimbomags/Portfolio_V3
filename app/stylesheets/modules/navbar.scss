@@ -13,11 +13,14 @@ nav {
     padding: 0;
     width: 40%;
     justify-content: space-between;
-    li {
+    button {
       list-style: none;
       min-width: 60px;
       margin: auto;
       text-align: center;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

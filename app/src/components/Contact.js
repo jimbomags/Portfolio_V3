@@ -23,7 +23,7 @@ const ContactIcons = () => (
   contactIconsArr.map((obj) => {
     const { src, alt, href } = obj;
     return (
-      <a href={href}>
+      <a href={href} key={alt}>
         <img src={src} alt={alt} />
       </a>
     );
