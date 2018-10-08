@@ -45,3 +45,34 @@ h2 {
   @extend %section-line;
   background-color: $light-line;
 }
+%not-pressed {
+  border-right-color: $green-btn-border;
+  border-bottom-color: $green-btn-border;
+  border-top-color: $green-btn;
+  border-left-color: $green-btn;
+}
+%pressed {
+  border-right-color: $green-btn;
+  border-bottom-color: $green-btn;
+  border-top-color: $green-btn-border;
+  border-left-color: $green-btn-border;
+}
+.btn-green {
+  background-color: $green-btn;
+  border-width: 5px;
+  border-style: solid;
+  color: $off-white;
+  border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.push_button {
+  @extend %not-pressed;
+  &:active {
+    @extend %pressed;
+  }
+  &:focus {
+    outline: 0;
+  }
+}

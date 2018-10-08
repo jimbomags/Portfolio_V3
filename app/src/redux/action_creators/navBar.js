@@ -1,4 +1,4 @@
-import { SCROLL } from '../actions';
+const SCROLL = 'SCROLL';
 
 const navBar = element => ({
   type: SCROLL,

@@ -4,6 +4,7 @@ import HomePage from './HomePage';
 import About from './About';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
+import SnakesAndLadders from './snakes_&_ladders/SnakesAndLadders';
 
 const Home = () => (
   <div>
@@ -15,6 +16,7 @@ const Home = () => (
       <About />
       <Portfolio />
       <Contact />
+      <SnakesAndLadders />
     </main>
   </div>
 );

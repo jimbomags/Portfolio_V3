@@ -1,0 +1,90 @@
+@import './variables.scss';
+
+#sandl-container {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  #players {
+    position: sticky;
+    position: -webkit-sticky;
+    height: 85vh;
+    top: -1px;
+    width: 12.5%;
+    display: flex;
+    flex-direction: column;
+    margin: 2% 0px;
+    .player-display {
+      display: flex;
+      margin: 3% auto 0 auto;
+    }
+    #p1 div {
+      background-color: red;
+      width: 25px;
+      height: 25px;
+      margin: 10px;
+      border-radius: 25px;
+    }
+    #p2 div {
+      background-color: blue;
+      width: 25px;
+      height: 25px;
+      margin: 10px;
+      border-radius: 25px;
+    }
+    #score-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      height: 40vh;
+      margin: 40% 0px 0px 0px;
+      p {
+        text-align: center;
+      }
+    }
+  }
+  #board {
+    width: 77.5%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    margin: 2% 0px;
+    .board-row {
+      display: flex;
+      width: 100%;
+      .square {
+        display: flex;
+        width: 10%;
+        justify-content: center;
+        border: 2px black solid;
+      }
+    }
+    p {
+      text-align: center;
+      color: black;
+      margin: auto 10px;
+
+    }
+    :nth-child(even) {
+        flex-direction: row-reverse;
+    }
+  }
+  button {
+    width: 90%;
+    margin: 0px auto;
+    height: 50px;
+  }
+  #p1-Circle {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 25px;
+    margin: auto 0px;
+  }
+  #p2-Circle {
+    width: 15px;
+    height: 15px;
+    background-color: blue;
+    border-radius: 25px;
+    margin: auto 0px;
+  }
+}
