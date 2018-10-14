@@ -1,8 +1,11 @@
 const DICE_ROLLED = 'DICE_ROLLED';
+const RESTART_GAME = 'RESTART_GAME';
 
-const snakesAndLadders = stateObj => ({
+export const rollDice = diceNum => ({
   type: DICE_ROLLED,
-  stateObj,
+  diceNum,
 });
 
-export default snakesAndLadders;
+export const restartGame = () => ({
+  type: RESTART_GAME,
+});

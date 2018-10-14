@@ -93,7 +93,7 @@ Navbar.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  greenLine: state,
+  greenLine: state.navBar,
 });
 
 const mapDispatchToProps = dispatch => ({

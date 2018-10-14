@@ -1,16 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Row from './Row';
 import Square from './Square';
 
-const Board = ({
-  p1Score,
-  p2Score,
-  ladders,
-  snakes,
-  ladderKeys,
-  snakesKeys,
-}) => {
+const Board = (props) => {
+  const { p1Score, p2Score } = props.sandl;
   const grid = [];
   let number = 100;
   if (window.screen.width > 800) {
@@ -22,10 +17,6 @@ const Board = ({
           key={k}
           p1Score={p1Score}
           p2Score={p2Score}
-          ladders={ladders}
-          snakes={snakes}
-          ladderKeys={ladderKeys}
-          snakesKeys={snakesKeys}
         />);
         number -= 1;
       }
@@ -39,12 +30,26 @@ const Board = ({
       }
     }
   }
-  return grid.map((arr, index) => <Row squares={arr} key={index} />);
+  return (
+    <div id="board">
+      {grid.map((arr, index) => <Row squares={arr} key={index} />)}
+    </div>
+  );
 };
 
 Board.propTypes = {
-  p1Score: PropTypes.number.isRequired,
-  p2Score: PropTypes.number.isRequired,
+  sandl: PropTypes.shape({
+    p1Turn: PropTypes.bool,
+    p1Score: PropTypes.number,
+    p2Score: PropTypes.number,
+    rollDiceInfo: PropTypes.string,
+    turnInfo: PropTypes.string,
+    playerHasWon: PropTypes.bool,
+  }).isRequired,
 };
 
-export default Board;
+const mapStateToProps = state => ({
+  sandl: state.snakesAndLadders,
+});
+
+export default connect(mapStateToProps, null)(Board);

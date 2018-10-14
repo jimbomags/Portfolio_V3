@@ -1,5 +1,26 @@
 @import './variables.scss';
 
+$dark-grey-border: 2px solid $dark-grey;
+
+%player-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 25px;
+  border: solid 1px white;
+  margin: auto 5px;
+  color: $off-white;
+  text-align: center;
+  display: flex;
+  font-size: 18px;
+  span {
+    margin: -3px auto auto auto;
+  }
+}
+%square-background-image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 #sandl-container {
   min-height: 100vh;
   display: flex;
@@ -9,27 +30,13 @@
     position: -webkit-sticky;
     height: 85vh;
     top: -1px;
-    width: 12.5%;
+    width: 19%;
     display: flex;
     flex-direction: column;
-    margin: 2% 0px;
+    margin: 2% 1% 2% 0;
     .player-display {
       display: flex;
       margin: 3% auto 0 auto;
-    }
-    #p1 div {
-      background-color: red;
-      width: 25px;
-      height: 25px;
-      margin: 10px;
-      border-radius: 25px;
-    }
-    #p2 div {
-      background-color: blue;
-      width: 25px;
-      height: 25px;
-      margin: 10px;
-      border-radius: 25px;
     }
     #score-info {
       display: flex;
@@ -38,16 +45,16 @@
       height: 40vh;
       margin: 40% 0px 0px 0px;
       p {
-        text-align: center;
+        text-align: justify;
       }
     }
   }
   #board {
-    width: 77.5%;
+    width: 78%;
     display: flex;
     flex-wrap: wrap;
     background-color: white;
-    margin: 2% 0px;
+    margin: 2% 1%;
     .board-row {
       display: flex;
       width: 100%;
@@ -55,14 +62,31 @@
         display: flex;
         width: 10%;
         justify-content: center;
-        border: 2px black solid;
+        border: $dark-grey-border;
+        div {
+          margin: auto 0;
+        }
+        #p1-Circle {
+          @extend %player-circle;
+          background-color: red;
+        }
+        #p2-Circle {
+          @extend %player-circle;
+          background-color: rgb(0, 150, 0);
+        }
       }
-    }
-    p {
-      text-align: center;
-      color: black;
-      margin: auto 10px;
-
+      .snake {
+        background-image: url('../dist/assets/snake.png');
+        @extend %square-background-image;
+      }
+      .ladder {
+        background-image: url('../dist/assets/ladder.png');
+        @extend %square-background-image;
+      }
+      .blue-background {
+        background-color: rgb(0, 125, 255);
+        color: $off-white;
+      }
     }
     :nth-child(even) {
         flex-direction: row-reverse;
@@ -70,21 +94,29 @@
   }
   button {
     width: 90%;
-    margin: 0px auto;
+    margin: 8vh auto;
     height: 50px;
   }
-  #p1-Circle {
-    width: 15px;
-    height: 15px;
-    background-color: red;
-    border-radius: 25px;
-    margin: auto 0px;
-  }
-  #p2-Circle {
-    width: 15px;
-    height: 15px;
-    background-color: blue;
-    border-radius: 25px;
-    margin: auto 0px;
+  #winner-message {
+    position: absolute;
+    background-image: url('../dist/assets/fireworks.jpg');
+    background-size: contain;
+    color: $off-white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    border: $dark-grey-border;
+    div {
+      margin: 25vh auto;
+      display: flex;
+      flex-wrap: wrap;
+      h2 {
+        font-size: 50px;
+      }
+      button {
+        margin: 200px auto 0 auto;
+        width: 20%;
+      }
+    }
   }
 }
