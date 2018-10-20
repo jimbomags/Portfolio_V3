@@ -1,14 +1,9 @@
+/* eslint-disable object-curly-newline  */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Button = ({
-  type,
-  label,
-  handleClick,
-  id,
-  className,
-  disabled,
-}) => (
+export const Button = ({ type, label, handleClick, id, className, disabled }) => (
   <button id={id} className={className} onClick={handleClick} type={type} disabled={disabled} >
     {label}
   </button>
@@ -42,4 +37,42 @@ export const SectionHeader = ({ text }) => (
 
 SectionHeader.propTypes = {
   text: PropTypes.string.isRequired,
+};
+
+export const Input = ({ value, id, handleChange, error, errorMessage }) => {
+  let hidden = 'hidden';
+  let errorInput;
+  if (error) {
+    hidden = null;
+    errorInput = 'error-input';
+  }
+  return (
+    <div className="input-container">
+      <input value={value} id={id} onChange={handleChange} className={errorInput} />
+      <span className={`error-span ${hidden}`}>{errorMessage}</span>
+    </div>
+  );
+};
+
+Input.propTypes = {
+  value: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  handleChange: PropTypes.func.isRequired,
+  error: PropTypes.bool.isRequired,
+  errorMessage: PropTypes.string.isRequired,
+};
+
+Input.defaultProps = {
+  id: null,
+};
+
+export const Loader = ({ dispayLoader }) => {
+  const display = dispayLoader ? 'flex' : 'hidden';
+  return (
+    <div className={`${display} loader`} />
+  );
+};
+
+Loader.propTypes = {
+  dispayLoader: PropTypes.bool.isRequired,
 };
