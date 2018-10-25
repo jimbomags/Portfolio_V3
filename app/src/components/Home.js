@@ -6,6 +6,7 @@ import Portfolio from './Portfolio';
 import Contact from './Contact';
 import SnakesAndLadders from './snakes_&_ladders/SnakesAndLadders';
 import Weather from './weather/Weather';
+import Bookmark from './bookmark/Bookmark';
 
 const Home = () => (
   <div>
@@ -19,6 +20,7 @@ const Home = () => (
       <Contact />
       <SnakesAndLadders />
       <Weather />
+      <Bookmark />
     </main>
   </div>
 );

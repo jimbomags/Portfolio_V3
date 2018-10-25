@@ -61,13 +61,20 @@ h2 {
   border-left: $green-btn-border 5px solid;
   border-top: $green-btn-border 5px solid;
 }
-.btn-green {
-  background-color: $green-btn;
+%styled-btn {
   color: $off-white;
   border-radius: 5px;
   &:hover {
     cursor: pointer;
   }
+}
+.btn-green {
+  background-color: $green-btn;
+  @extend %styled-btn;
+}
+.btn-red {
+  background-color: rgb(200, 0, 0);
+  @extend %styled-btn;
 }
 .push_button {
   @extend %not-pressed;
