@@ -23,7 +23,7 @@ const SubmitBookmarkForm = (props) => {
 
   return (
     <div id="form-container" className={display}>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} autoComplete="off">
         <div id="label-container">
           <label htmlFor="bookmark-input">{`${text} Bookmark:`}</label>
         </div>

@@ -7,6 +7,7 @@ import Contact from './Contact';
 import SnakesAndLadders from './snakes_&_ladders/SnakesAndLadders';
 import Weather from './weather/Weather';
 import Bookmark from './bookmark/Bookmark';
+import RandomQuote from './RandomQuote';
 
 const Home = () => (
   <div>
@@ -21,6 +22,7 @@ const Home = () => (
       <SnakesAndLadders />
       <Weather />
       <Bookmark />
+      <RandomQuote />
     </main>
   </div>
 );
