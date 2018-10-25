@@ -7,10 +7,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    div {
-      height: 225px;
+    a {
       width: 40%;
       margin: 2% 0;
+      text-decoration: none;
+    }
+    div {
+      height: 225px;
+      width: 100%;
       border-radius: 10px;
       background-size: 100% 100%;
       #description-text-container {

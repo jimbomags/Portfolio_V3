@@ -8,11 +8,12 @@
     justify-content: center;
     #quote {
       min-height: 35vh;
-      border: 2px solid black;
+      border: 3px solid black;
       width: 85%;
       display: flex;
       border-radius: 150px;
       border-bottom-right-radius: 0;
+      background-color: white;
       p {
         width: 80%;
         margin: auto;

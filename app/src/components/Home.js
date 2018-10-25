@@ -1,30 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Navbar from './Navbar';
 import HomePage from './HomePage';
 import About from './About';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
-import SnakesAndLadders from './snakes_&_ladders/SnakesAndLadders';
-import Weather from './weather/Weather';
-import Bookmark from './bookmark/Bookmark';
-import RandomQuote from './RandomQuote';
 
-const Home = () => (
-  <div>
-    <header>
-      <Navbar />
-      <HomePage />
-    </header>
-    <main>
-      <About />
-      <Portfolio />
-      <Contact />
-      <SnakesAndLadders />
-      <Weather />
-      <Bookmark />
-      <RandomQuote />
-    </main>
-  </div>
-);
+class Home extends Component {
+  constructor(props) {
+    super(props);
+  }
+  componentDidMount() {
+    if (this.props.navBar.portfolio === 'green_underline') {
+      document.querySelector('#portfolio-container').scrollIntoView();
+    }
+  }
+  render() {
+    return (
+      <div>
+        <header>
+          <Navbar />
+          <HomePage />
+        </header>
+        <main>
+          <About />
+          <Portfolio />
+          <Contact />
 
-export default Home;
+        </main>
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = state => ({
+  navBar: state.navBar,
+});
+
+export default connect(mapStateToProps, null)(Home);
