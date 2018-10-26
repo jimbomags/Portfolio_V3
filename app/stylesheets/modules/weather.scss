@@ -3,7 +3,7 @@
 #weather-container {
   height: 100vh;
   width: 100%;
-  background-image: url('../dist/assets/weather-background.jpg');
+  background-image: url('../dist/assets/weather-background.jpeg');
   background-size: 100% 100%;
   display: flex;
   form {
@@ -17,7 +17,7 @@
       text-align: center;
     }
     .input-container {
-      width: 95%;
+      width: 90%;
       height: 70px;
     }
     input {
@@ -28,7 +28,7 @@
       margin: 4% 0 0 0;
     }
     #my-location-btn {
-      width: 5%;
+      width: 10%;
       margin-left: -2%;
       img {
         height: 40px;

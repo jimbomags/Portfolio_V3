@@ -15,7 +15,7 @@ const portfolioDataArr = [
   },
   {
     linkURL: '/bookmark',
-    imageURL: './assets/bookmark.jpg',
+    imageURL: './assets/bookmark.jpeg',
     alt: 'Bookmark App',
   },
   {
