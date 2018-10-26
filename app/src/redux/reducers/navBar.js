@@ -14,7 +14,6 @@ const navBar = (state = initialState, action) => {
         portfolio: '',
         contact: '',
       };
-      break;
     case 'About':
       return {
         home: '',
@@ -22,7 +21,6 @@ const navBar = (state = initialState, action) => {
         portfolio: '',
         contact: '',
       };
-      break;
     case 'Portfolio':
       return {
         home: '',
@@ -30,7 +28,6 @@ const navBar = (state = initialState, action) => {
         portfolio: 'green_underline',
         contact: '',
       };
-      break;
     case 'Contact':
       return {
         home: '',
@@ -38,7 +35,6 @@ const navBar = (state = initialState, action) => {
         portfolio: '',
         contact: 'green_underline',
       };
-      break;
     default:
       return state;
   }

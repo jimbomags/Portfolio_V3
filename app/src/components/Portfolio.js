@@ -29,11 +29,10 @@ const PortfolioTiles = () => (
   portfolioDataArr.map((obj) => {
     const { imageURL, alt, linkURL } = obj;
     return (
-      <Link to={linkURL}>
+      <Link to={linkURL} key={alt}>
         <div
           style={{ backgroundImage: `url(${imageURL})` }}
           alt={alt}
-          key={alt}
         >
           <div id="description-text-container">
             <p>{alt}</p>
