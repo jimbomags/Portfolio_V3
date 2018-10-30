@@ -90,6 +90,12 @@
   #weather-container {
     form {
       width: 80%;
+      .input-container {
+        width: 85%;
+      }
+      #my-location-btn {
+        width: 15%;
+      }
     }
     #weather-results-container {
       margin-top: 12vh;

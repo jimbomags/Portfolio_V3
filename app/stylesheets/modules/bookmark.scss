@@ -74,3 +74,19 @@
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  #bookmark-container {
+    #heading {
+      width: 90%;
+    }
+    ul {
+      width: 90%;
+    }
+    #form-container {
+      form {
+        width: 90%;
+      }
+    }
+  }
+}
