@@ -21,3 +21,20 @@
     margin: 1% auto;
   }
 }
+
+@media screen and (max-width: 800px) {
+  #about-container {
+    img {
+      margin: 3% auto;
+      width: 60%;
+      max-width: 300px;
+    }
+    p {
+      min-width: 90%;
+      margin: 3% auto;
+    }
+    p:nth-of-type(2) {
+      min-width: 90%;
+    }
+  }
+}

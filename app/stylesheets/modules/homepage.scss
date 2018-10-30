@@ -6,7 +6,7 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  background-image: url('../dist/assets/background.jpeg');
+  background-image: url('../dist/assets/background.jpg');
   background-size: cover;
   background-position: bottom;
   h1 {
@@ -35,6 +35,20 @@
     }
     &:hover {
       cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #homepage {
+    background: none;
+    h1 {
+      width: 100%;
+      margin: 25vh auto;
+      text-align: center;
+    }
+    #chevron-down-container {
+      margin-top: 0;
     }
   }
 }

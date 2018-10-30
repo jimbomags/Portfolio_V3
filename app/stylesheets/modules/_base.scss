@@ -34,6 +34,9 @@ h2 {
   margin: 5% auto 3% auto;
   width: 60%;
   max-height: 100px;
+  @media screen and (max-width: 800px) {
+    width: 90%;
+  }
 }
 %section-line {
   height: 5px;

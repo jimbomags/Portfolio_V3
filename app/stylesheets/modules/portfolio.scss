@@ -40,3 +40,17 @@
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  #portfolio-container {
+    #portfolio-tiles-container {
+      width: 90%;
+      a {
+        width: 45%;
+      }
+      #description-text-container {
+        text-align: center;
+      }
+    }
+  }
+}

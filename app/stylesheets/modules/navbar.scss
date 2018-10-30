@@ -28,3 +28,11 @@ nav {
   border-bottom: $green-btn 3px solid;
   padding: 3px 0;
 }
+
+@media screen and (max-width: 800px) {
+  nav {
+    ul {
+      width: 100%;
+    }
+  }
+}
