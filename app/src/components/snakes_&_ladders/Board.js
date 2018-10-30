@@ -22,9 +22,9 @@ const Board = (props) => {
       }
     }
   } else {
-    for (let i = 0; i < 25; i += 1) {
+    for (let i = 0; i < 20; i += 1) {
       grid.push([]);
-      for (let k = 0; k < 4; k += 1) {
+      for (let k = 0; k < 5; k += 1) {
         grid[i].push(<Square number={number} key={k} p1Score={p1Score} p2Score={p2Score} />);
         number -= 1;
       }

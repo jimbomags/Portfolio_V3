@@ -120,3 +120,36 @@ $dark-grey-border: 2px solid $dark-grey;
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  #sandl-container {
+    #players {
+      width: 26%;
+      #score-info {
+        p {
+          text-align: left;
+        }
+      }
+    }
+    #board {
+      width: 70%;
+      .board-row {
+        .square {
+          width: 20%;
+        }
+      }
+    }
+    button {
+      width: 100%;
+      margin: 30vh auto 0 auto;
+    }
+    #winner-message {
+      div {
+        button {
+          margin-top: 150px;
+          width: 40%;
+        }
+      }
+    }
+  }
+}

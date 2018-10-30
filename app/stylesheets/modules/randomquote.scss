@@ -35,3 +35,14 @@
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  #random-quote-container {
+    #quote-text {
+      width: 98%;
+      #quote {
+        min-height: 60vh;
+      }
+    }
+  }
+}
