@@ -10,8 +10,9 @@ const HomePage = () => (
     <h1>James McGill<br /><span>Frontend Developer</span></h1>
     <Button
       id="chevron-down-container"
+      className="animated bounce slower infinite"
       type="button"
-      label={<img src="./assets/chevron_down.png" alt="scroll down" />}
+      label={<i class="fas fa-angle-down"></i>}
       handleClick={handleClick}
     />
   </div>

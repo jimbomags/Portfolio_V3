@@ -1,11 +1,12 @@
 @import './variables';
 
 nav {
+  max-width: 1200px;
   width: 100%;
+  margin: 0 auto;
   height: 8vh;
   display: flex;
-  position: fixed;
-  background-color: $light-line;
+  background-color: white;
   border-radius: 0 0 10px 10px;
   ul {
     display: flex;
