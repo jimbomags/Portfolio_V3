@@ -42,7 +42,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   getQuote: () => {
-    fetch('https://talaikis.com/api/quotes/random/').then(response => response.text()).then((text) => {
+    fetch('https://cors-anywhere.herokuapp.com/https://quota.glitch.me/random').then(response => response.text()).then((text) => {
       dispatch(getQuote(JSON.parse(text)));
     });
   },
