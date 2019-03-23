@@ -9,7 +9,7 @@ const Heading = props => (
     <h1>
       Bookmarks:
     </h1>
-    <Button label="Add Bookmark" className="btn-green" handleClick={props.displayAddBookmarkForm} />
+    <Button label="Add Bookmark" className="btn btn-success" handleClick={props.displayAddBookmarkForm} />
   </div>
 );
 

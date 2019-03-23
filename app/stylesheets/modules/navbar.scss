@@ -19,8 +19,11 @@ nav {
       min-width: 60px;
       margin: auto;
       text-align: center;
+      padding-bottom: 3px;
       &:hover {
         cursor: pointer;
+        background: $green-btn;
+        color: white !important;
       }
     }
   }

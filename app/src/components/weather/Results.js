@@ -19,7 +19,7 @@ const Results = (props) => {
       <div id="weather-text-info-container">
         <div>{condition}<br /> {temp}°c</div>
       </div>
-      <Button handleClick={props.searchAgain} label="Search Again" className="btn-green" />
+      <Button handleClick={props.searchAgain} label="Search Again" className="btn btn-success" />
     </div>
   );
 };

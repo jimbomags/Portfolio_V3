@@ -99,7 +99,7 @@ class InputForm extends Component {
           handleClick={this.getUserCoordinates}
         />
         <div className="btn-container">
-          <Button label="Search" type="submit" className="btn-green" handleClick={this.getCoordinates} />
+          <Button label="Search" type="submit" className="btn btn-success" handleClick={this.getCoordinates} />
         </div>
       </form>
     );

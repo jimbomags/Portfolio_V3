@@ -20,7 +20,7 @@ class RandomQuote extends Component {
           </div>
           <div id="author"><span>{`-${this.props.randomQuote.author}`}</span></div>
           <div id="button-container">
-            <Button label="Get Quote" handleClick={this.props.getQuote} className="btn-green" />
+            <Button label="Get Quote" handleClick={this.props.getQuote} className="btn btn-success" />
           </div>
         </div>
       </div>

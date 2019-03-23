@@ -3,17 +3,17 @@ import { SectionHeader } from './reusable';
 
 const contactIconsArr = [
   {
-    src: './assets/github.png',
+    icon: 'fab fa-github',
     alt: 'James McGill\'s Github Profile',
     href: 'https://github.com/jimbomags',
   },
   {
-    src: './assets/mail.png',
+    icon: 'fas fa-envelope',
     alt: 'E-mail James McGill',
     href: 'mailto:contact@jamesmcgill.co.uk',
   },
   {
-    src: './assets/linkedin.png',
+    icon: 'fab fa-linkedin',
     alt: 'James McGill\'s LinkedIn Profile',
     href: 'https://www.linkedin.com/in/james-mcgill-0a997038/',
   },
@@ -21,10 +21,10 @@ const contactIconsArr = [
 
 const ContactIcons = () => (
   contactIconsArr.map((obj) => {
-    const { src, alt, href } = obj;
+    const { icon, alt, href } = obj;
     return (
       <a href={href} key={alt}>
-        <img src={src} alt={alt} />
+        <i className={icon} alt={alt} />
       </a>
     );
   })

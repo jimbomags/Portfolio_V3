@@ -22,9 +22,9 @@
         height: 100%;
         display: flex;
         margin: 0;
-        box-shadow: 5px 5px 20px $dark-grey;
         &:hover {
           background-color: rgba(25, 25, 25, 0.7);
+          box-shadow: 0px 0px 10px 5px #C8C8C8;
           color: $off-white;
           cursor: pointer;
           p {

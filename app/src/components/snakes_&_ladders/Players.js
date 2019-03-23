@@ -14,7 +14,7 @@ const Players = (props) => {
         <p id="roll-dice-info">{rollDiceInfo}</p>
         <p id="landed-on-s-or-l">{turnInfo}</p>
       </div>
-      <Button className="btn-green button push_button" handleClick={() => props.rollDice(diceNum)} label="Roll Dice" disabled={disabled} />
+      <Button className="btn btn-success" handleClick={() => props.rollDice(diceNum)} label="Roll Dice" disabled={disabled} />
     </div>
   );
 };

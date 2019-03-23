@@ -16,7 +16,7 @@ const WinnerMessage = (props) => {
     <div id="winner-message" style={{ display: winnerMessageDisplay }}>
       <div>
         <h2>{`${player} you landed on 100. You've won!`}</h2>
-        <Button label="Play Again" handleClick={restartGame} className="btn-green button push_button" />
+        <Button label="Play Again" handleClick={restartGame} className="btn btn-success" />
       </div>
     </div>
   );

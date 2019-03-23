@@ -35,9 +35,9 @@ const SubmitBookmarkForm = (props) => {
             props.resetFormValue();
             props.hideSubmitBookmarkForm();
             }}
-            className="btn-red"
+            className="btn btn-danger"
           />
-          <Button type="submit" label="Submit" className="btn-green" handleClick={handleSubmit} />
+          <Button type="submit" label="Submit" className="btn btn-success" handleClick={handleSubmit} />
         </div>
       </form>
     </div>

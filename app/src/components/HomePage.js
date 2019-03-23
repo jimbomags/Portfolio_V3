@@ -2,17 +2,17 @@ import React from 'react';
 import { Button } from './reusable';
 
 const handleClick = () => {
-  document.querySelector('#about-container').scrollIntoView({behavior: 'smooth', block: 'start'});
+  document.querySelector('#portfolio-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
 };
 
 const HomePage = () => (
-  <div id="homepage">
+  <div id="homepage" className="container">
     <h1>James McGill<br /><span>Frontend Developer</span></h1>
     <Button
       id="chevron-down-container"
-      className="animated bounce slower infinite"
+      className="btn btn-success"
       type="button"
-      label={<i class="fas fa-angle-down"></i>}
+      label={<i className="fas fa-angle-down" />}
       handleClick={handleClick}
     />
   </div>

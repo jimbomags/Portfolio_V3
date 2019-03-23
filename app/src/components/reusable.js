@@ -27,11 +27,7 @@ Button.defaultProps = {
 
 export const SectionHeader = ({ text }) => (
   <div className="section-header">
-    <div className="dark-line" />
-    <div className="light-line" />
     <h2>{text}</h2>
-    <div className="dark-line" />
-    <div className="light-line" />
   </div>
 );
 

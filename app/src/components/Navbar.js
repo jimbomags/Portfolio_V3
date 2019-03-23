@@ -21,10 +21,6 @@ const navbarText = [{
   text: 'Home',
 },
 {
-  id: '#about-container',
-  text: 'About',
-},
-{
   id: '#portfolio-container',
   text: 'Portfolio',
 },
@@ -38,20 +34,20 @@ class Navbar extends Component {
   constructor(props) {
     super(props);
   }
-  componentDidMount() {
-    document.addEventListener('scroll', () => {
-      const { updateGreenUnderline } = this.props;
-      if (elementIsInView('#contact-container')) {
-        updateGreenUnderline('Contact');
-      } else if (elementIsInView('#homepage')) {
-        updateGreenUnderline('Home');
-      } else if (elementIsInView('#about-container')) {
-        updateGreenUnderline('About');
-      } else if (elementIsInView('#portfolio-container')) {
-        updateGreenUnderline('Portfolio');
-      }
-    });
-  }
+  // componentDidMount() {
+  //   document.addEventListener('scroll', () => {
+  //     const { updateGreenUnderline } = this.props;
+  //     if (elementIsInView('#contact-container')) {
+  //       updateGreenUnderline('Contact');
+  //     } else if (elementIsInView('#homepage')) {
+  //       updateGreenUnderline('Home');
+  //     } else if (elementIsInView('#about-container')) {
+  //       updateGreenUnderline('About');
+  //     } else if (elementIsInView('#portfolio-container')) {
+  //       updateGreenUnderline('Portfolio');
+  //     }
+  //   });
+  // }
   scrollIntoView(element) {
     document.querySelector(element).scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
@@ -62,7 +58,7 @@ class Navbar extends Component {
     const NavbarLinks = () => (
       navbarText.map((link, index) => (
         <Button
-          className={greenLine[greenLineObjKeys[index]]}
+          // className={greenLine[greenLineObjKeys[index]]}
           handleClick={() => {
             this.scrollIntoView(link.id);
           }}
