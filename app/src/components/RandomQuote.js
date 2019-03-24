@@ -13,7 +13,7 @@ class RandomQuote extends Component {
   }
   render() {
     return (
-      <div id="random-quote-container">
+      <div id="random-quote-container" className="container">
         <div id="quote-text">
           <div id="quote">
             <p>{`"${this.props.randomQuote.quote}"`}</p>

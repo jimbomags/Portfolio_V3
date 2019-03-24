@@ -12,6 +12,10 @@
     i {
       font-size: 70px;
       color: black;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }

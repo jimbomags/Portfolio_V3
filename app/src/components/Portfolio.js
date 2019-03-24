@@ -44,7 +44,7 @@ const PortfolioTiles = () => (
 );
 
 const Portfolio = () => (
-  <div id="portfolio-container">
+  <div id="portfolio-container" className="container">
     <SectionHeader text="Portfolio" />
     <div id="portfolio-tiles-container">
       <PortfolioTiles />

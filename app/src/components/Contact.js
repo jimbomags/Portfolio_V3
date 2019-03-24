@@ -31,7 +31,7 @@ const ContactIcons = () => (
 );
 
 const Contact = () => (
-  <div id="contact-container">
+  <div id="contact-container" className="container">
     <SectionHeader text="Contact" />
     <div id="contact-icons-container">
       <ContactIcons />

@@ -37,7 +37,7 @@ class Bookmark extends Component {
   }
   render() {
     return (
-      <div id="bookmark-container">
+      <div id="bookmark-container" className="container">
         <Heading />
         <BookmarkList updateEdit={this.updateEdit} />
         <SubmitBookmarkForm
